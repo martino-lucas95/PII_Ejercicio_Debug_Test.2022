@@ -1,11 +1,10 @@
-using System;
-using Xunit;
+using NUnit.Framework;
 
 namespace WordsPhrases.Tests
 {
     public class PhraseTests
     {
-        [Fact]
+        [Test]
         public void TestAddRemoveWord()
         {
             Phrase phrase = new Phrase();
@@ -14,7 +13,7 @@ namespace WordsPhrases.Tests
             phrase.RemoveWord(word);
         }
 
-        [Fact]
+        [Test]
         public void TestGetPhrase()
         {
             const string text1 = "text1";
@@ -26,10 +25,10 @@ namespace WordsPhrases.Tests
             phrase.AddWord(word1);
             phrase.AddWord(word2);
             string actual = phrase.GetPhrase();
-            Assert.Equal(expected, actual);
+            Assert.AreEqual(expected, actual);
         }
 
-        [Fact]
+        [Test]
         public void TestSpaces()
         {
             const string text1 = " text1 ";
@@ -41,7 +40,7 @@ namespace WordsPhrases.Tests
             phrase.AddWord(word1);
             phrase.AddWord(word2);
             string actual = phrase.GetPhrase();
-            Assert.Equal(expected, actual);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
