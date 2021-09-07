@@ -9,11 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/Program/bin/Debug/netcoreapp2.1/Program.dll",
+            "program": "${workspaceFolder}/src/Program/bin/Debug/net5.0/Program.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src/Program",
-            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
             "console": "internalConsole",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"

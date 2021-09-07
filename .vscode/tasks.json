@@ -7,16 +7,19 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/Program/Program.csproj"
+                "${workspaceFolder}",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "docfx",
-            "command": "docfx",
+            "label": "clean",
+            "command": "dotnet",
             "type": "process",
             "args": [
-                "${workspaceFolder}/docfx_project/docfx.json"
+                "clean",
+                "${workspaceFolder}"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -28,7 +31,8 @@
                 "test",
                 "${workspaceFolder}/tests/Library.Tests.csproj",
                 "/p:CollectCoverage=true",
-                "/p:CoverletOutputFormat=lcov"
+                "/p:CoverletOutputFormat=lcov",
+                "/p:CoverletOutput=lcov.info"
             ],
             "problemMatcher": "$msCompile"
         }
